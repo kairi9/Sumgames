@@ -2,19 +2,8 @@ from django.db import models
 from django.db.models.fields.related import ForeignKey
 from accounts.models import CustomUser
 
-class User(models.Model):
-    """ユーザーモデル"""
-
-    user = models.ForeignKey(CustomUser,verbose_name="ユーザー",on_delete=models.PROTECT)
-    username = models.CharField(verbose_name="ユーザーネーム",max_length=50)
-    Email = models.EmailField(verbose_name="メールアドレス")
-    password = models.CharField(verbose_name="パスワード",max_length=50)
-
-
 class Game(models.Model):
     """ゲームモデル"""
-
-    gameID = models.UUIDField(verbose_name="ID")
     gamename =models.CharField(verbose_name="ゲーム名",max_length=50)
     genre =models.IntegerField(verbose_name="ジャンル")
     detail = models.CharField(verbose_name="説明",max_length=200)
@@ -25,8 +14,6 @@ class Game(models.Model):
 
 class Talkroom(models.Model):
     """トークルームモデル"""
-
-    talkroom = models.UUIDField(verbose_name="トークルームID")
     create_at = models.TimeField(verbose_name="作成日時",auto_now_add=True)
 
     class Meta:
@@ -34,8 +21,6 @@ class Talkroom(models.Model):
 
 class Talk(models.Model):
     """トークモデル"""
-
-    talkID = models.UUIDField(verbose_name="トークID")
     talkroom = models.ForeignKey(Talkroom,on_delete=models.CASCADE)
     username = models.CharField(verbose_name="ユーザー名",max_length=50)
     talktext = models.CharField(verbose_name="内容テキスト",max_length=200,blank=True,null=True)
@@ -45,27 +30,23 @@ class Talk(models.Model):
 # Create your models here.
 class Recruit(models.Model):
     """募集テーブルモデル"""
-    RecruitID = models.UUIDField(verbose_name='ID')
     RecruitNUM = models.IntegerField(verbose_name='募集人数')
     RecruitGender = models.BooleanField(verbose_name='性別')
     RecruitPlatform = models.CharField(verbose_name='プラットフォーム',max_length=5)
     RecruitUserID = models.UUIDField(verbose_name='ユーザID')
     RecruitCon = models.TextField(verbose_name='募集内容',null=True)
     talkroom =models.UUIDField(verbose_name='トークルームID')
-    class Meta:
-        verbose_name_plural=''
+    
 
 
 class Platform(models.Model):
     """プラットフォームテーブルモデル"""
-    platformID = models.UUIDField(verbose_name='ID')
     platformname = models.CharField(verbose_name='プラットフォーム名',)
 
 
 
 class Genre(models.Model):
     """ゲームジャンルモデル"""
-    genreID = models.UUIDField(verbose_name='ID')
     genrename = models.CharField(verbose_name='ジャンル名')
 
 
