@@ -43,3 +43,30 @@ class Talk(models.Model):
     send_at = models.TimeField(verbose_name="送信日時")
 
 # Create your models here.
+class Recruit(models.Model):
+    """募集テーブルモデル"""
+    RecruitID = models.UUIDField(verbose_name='ID')
+    RecruitNUM = models.IntegerField(verbose_name='募集人数')
+    RecruitGender = models.BooleanField(verbose_name='性別')
+    RecruitPlatform = models.CharField(verbose_name='プラットフォーム',max_length=5)
+    RecruitUserID = models.UUIDField(verbose_name='ユーザID')
+    RecruitCon = models.TextField(verbose_name='募集内容',null=True)
+    talkroom =models.UUIDField(verbose_name='トークルームID')
+    class Meta:
+        verbose_name_plural=''
+
+
+class Platform(models.Model):
+    """プラットフォームテーブルモデル"""
+    platformID = models.UUIDField(verbose_name='ID')
+    platformname = models.CharField(verbose_name='プラットフォーム名',)
+
+
+
+class Genre(models.Model):
+    """ゲームジャンルモデル"""
+    genreID = models.UUIDField(verbose_name='ID')
+    genrename = models.CharField(verbose_name='ジャンル名')
+
+
+
