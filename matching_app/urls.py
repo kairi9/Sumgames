@@ -5,5 +5,5 @@ from . import views
 
 app_name = 'matching'
 urlpatterns = [
-    # path('', views.IndexView.as_view(), name="index")
+    path('', views.TopPageView.as_view(), name="top")
 ]
