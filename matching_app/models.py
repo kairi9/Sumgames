@@ -16,9 +16,6 @@ class Talkroom(models.Model):
     """トークルームモデル"""
     create_at = models.TimeField(verbose_name="作成日時",auto_now_add=True)
 
-    def __str__(self):
-        return self.create_at
-
     class Meta:
         ordering=['-create_at']
 
@@ -36,10 +33,12 @@ class Recruit(models.Model):
     RecruitNUM = models.IntegerField(verbose_name='募集人数')
     RecruitGender = models.BooleanField(verbose_name='性別')
     RecruitPlatform = models.ForeignKey(verbose_name='プラットフォーム',max_length=5)
-    RecruitUserID = models.UUIDField(verbose_name='ユーザID')
+    RecruitUserID = models.ForeignKey(verbose_name='ユーザID')
     RecruitCon = models.TextField(verbose_name='募集内容',null=True)
     talkroom =models.UUIDField(verbose_name='トークルームID')
     
+    def __str__(self):
+        return self.talkroom
 
 
 class Platform(models.Model):
