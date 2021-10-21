@@ -5,16 +5,19 @@ from accounts.models import CustomUser
 class Game(models.Model):
     """ゲームモデル"""
     gamename =models.CharField(verbose_name="ゲーム名",max_length=50)
-    genre =models.IntegerField(verbose_name="ジャンル")
+    genre =models.ForeignKey(verbose_name="ジャンル")
     detail = models.CharField(verbose_name="説明",max_length=200)
     image = models.ImageField(verbose_name="画像",null = True)
     tags = models.CharField(verbose_name="タグ",max_length=100)
-    platform = models.IntegerField(verbose_name="プラットフォーム")
+    platform = models.ForeignKey(verbose_name="プラットフォーム")
     update_at = models.DateTimeField(verbose_name="更新日時",auto_now=True)
 
 class Talkroom(models.Model):
     """トークルームモデル"""
     create_at = models.TimeField(verbose_name="作成日時",auto_now_add=True)
+
+    def __str__(self):
+        return self.create_at
 
     class Meta:
         ordering=['-create_at']
@@ -43,11 +46,17 @@ class Platform(models.Model):
     """プラットフォームテーブルモデル"""
     platformname = models.CharField(verbose_name='プラットフォーム名',)
 
+    def __str__(self):
+        return self.platformname
+
 
 
 class Genre(models.Model):
     """ゲームジャンルモデル"""
     genrename = models.CharField(verbose_name='ジャンル名')
+
+    def __str__(self):
+        return self.genrename
 
 
 
