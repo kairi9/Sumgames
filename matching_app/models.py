@@ -25,7 +25,7 @@ class Talkroom(models.Model):
 class Talk(models.Model):
     """トークモデル"""
     talkroom = models.ForeignKey(Talkroom,on_delete=models.CASCADE)
-    username = models.CharField(verbose_name="ユーザー名",max_length=50)
+    username = models.ForeignKey(verbose_name="ユーザー名",max_length=50)
     talktext = models.CharField(verbose_name="内容テキスト",max_length=200,blank=True,null=True)
     talk = models.FileField(verbose_name="内容静的ファイル")
     send_at = models.TimeField(verbose_name="送信日時")
@@ -35,7 +35,7 @@ class Recruit(models.Model):
     """募集テーブルモデル"""
     RecruitNUM = models.IntegerField(verbose_name='募集人数')
     RecruitGender = models.BooleanField(verbose_name='性別')
-    RecruitPlatform = models.CharField(verbose_name='プラットフォーム',max_length=5)
+    RecruitPlatform = models.ForeignKey(verbose_name='プラットフォーム',max_length=5)
     RecruitUserID = models.UUIDField(verbose_name='ユーザID')
     RecruitCon = models.TextField(verbose_name='募集内容',null=True)
     talkroom =models.UUIDField(verbose_name='トークルームID')
