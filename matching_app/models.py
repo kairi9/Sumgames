@@ -25,7 +25,7 @@ class Talkroom(models.Model):
 class Talk(models.Model):
     """トークモデル"""
     talkroom = models.ForeignKey(Talkroom,on_delete=models.CASCADE)
-    username = models.CharField(verbose_name="ユーザー名",max_length=50)
+    username = models.ForeignKey(verbose_name="ユーザー名",max_length=50)
     talktext = models.CharField(verbose_name="内容テキスト",max_length=200,blank=True,null=True)
     talk = models.FileField(verbose_name="内容静的ファイル")
     send_at = models.TimeField(verbose_name="送信日時")
@@ -44,7 +44,7 @@ class Recruit(models.Model):
 
 class Platform(models.Model):
     """プラットフォームテーブルモデル"""
-    platformname = models.CharField(verbose_name='プラットフォーム名',)
+    platformname = models.ForeignKey(verbose_name='プラットフォーム名',)
 
     def __str__(self):
         return self.platformname
@@ -53,7 +53,7 @@ class Platform(models.Model):
 
 class Genre(models.Model):
     """ゲームジャンルモデル"""
-    genrename = models.CharField(verbose_name='ジャンル名')
+    genrename = models.ForeignKey(verbose_name='ジャンル名')
 
     def __str__(self):
         return self.genrename
