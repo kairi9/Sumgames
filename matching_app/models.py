@@ -35,7 +35,7 @@ class Recruit(models.Model):
     """募集テーブルモデル"""
     RecruitNUM = models.IntegerField(verbose_name='募集人数')
     RecruitGender = models.BooleanField(verbose_name='性別')
-    RecruitPlatform = models.CharField(verbose_name='プラットフォーム',max_length=5)
+    RecruitPlatform = models.ForeignKey(verbose_name='プラットフォーム',max_length=5)
     RecruitUserID = models.UUIDField(verbose_name='ユーザID')
     RecruitCon = models.TextField(verbose_name='募集内容',null=True)
     talkroom =models.UUIDField(verbose_name='トークルームID')
@@ -44,7 +44,7 @@ class Recruit(models.Model):
 
 class Platform(models.Model):
     """プラットフォームテーブルモデル"""
-    platformname = models.ForeignKey(verbose_name='プラットフォーム名',)
+    platformname = models.CharField(verbose_name='プラットフォーム名',)
 
     def __str__(self):
         return self.platformname
@@ -53,7 +53,7 @@ class Platform(models.Model):
 
 class Genre(models.Model):
     """ゲームジャンルモデル"""
-    genrename = models.ForeignKey(verbose_name='ジャンル名')
+    genrename = models.CharField(verbose_name='ジャンル名')
 
     def __str__(self):
         return self.genrename
