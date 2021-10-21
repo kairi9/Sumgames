@@ -14,8 +14,8 @@ urlpatterns = [
     path('',views.Game.View.as_view(),name="game"),
     path('',views.GuestconfirmationView.as_view(),name="guestconfirmation"),
     path('',views.TalkroomView.as_view(),name="talkroom"),
-    path('',views.IndexView.as_view(),name="index"),
-    path('',views.DoneView.as_view(),name="done"),
+    path('',views.NftindexView.as_view(),name="index"),
+    path('',views.NftdoneView.as_view(),name="done"),
     path('',views.ProfileView.as_view(),name="profile"),
     path('',views.Profile_editView.as_view(),name="profile_edit"),
 ]
