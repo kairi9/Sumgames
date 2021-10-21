@@ -24,7 +24,7 @@ class Talk(models.Model):
     talkroom = models.ForeignKey(Talkroom,on_delete=models.CASCADE)
     username = models.ForeignKey(verbose_name="ユーザー名",max_length=50)
     talktext = models.CharField(verbose_name="内容テキスト",max_length=200,blank=True,null=True)
-    talk = models.FileField(verbose_name="内容静的ファイル")
+    talkfile = models.FileField(verbose_name="内容静的ファイル")
     send_at = models.TimeField(verbose_name="送信日時")
 
 # Create your models here.
