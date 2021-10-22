@@ -6,9 +6,6 @@ from django.views.generic import View
 class TopPageView(View):
     pass
 
-class PasswordView(View):
-    pass
-
 class VerificationView(View):
     pass
 
