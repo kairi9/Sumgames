@@ -1,31 +1,52 @@
 from django.db import models
 from accounts.models import CustomUser
+import uuid as uuid_lib
 
 class Genre(models.Model):
     """ゲームジャンルモデル"""
-    genrename = models.CharField(verbose_name='ジャンル名',max_length=50)
+    id = models.UUIDField(
+        default=uuid_lib.uuid4,
+        primary_key=True,
+        editable=False,
+    )
+    genrename = models.CharField(verbose_name='ジャンル名',max_length=50,unique=True)
 
     def __str__(self):
         return self.genrename
 
 class Tags(models.Model):
-    tag_name = models.CharField(verbose_name="タグ名",max_length=50)
+    id = models.UUIDField(
+        default=uuid_lib.uuid4,
+        primary_key=True,
+        editable=False,
+    )
+    tag_name = models.CharField(verbose_name="タグ名",max_length=50,unique=True)
 
     def __str__(self):
         return self.tag_name
 
 class Platform(models.Model):
-    platform_name = models.CharField(verbose_name='プラットフォーム名',max_length=50)
+    id = models.UUIDField(
+        default=uuid_lib.uuid4,
+        primary_key=True,
+        editable=False,
+    )
+    platform_name = models.CharField(verbose_name='プラットフォーム名',max_length=50,unique=True)
     def __str__(self):
         return self.platform_name
 
 class Game(models.Model):
     """ゲームモデル"""
-    game_name =models.CharField(verbose_name="ゲーム名",max_length=50)
+    id = models.UUIDField(
+        default=uuid_lib.uuid4,
+        primary_key=True,
+        editable=False,
+    )
+    game_name =models.CharField(verbose_name="ゲーム名",max_length=50,unique=True)
     genre =models.ManyToManyField(Genre,verbose_name="ジャンル")
-    detail = models.TextField(verbose_name="説明",null=True)
-    image = models.ImageField(verbose_name="画像",null = True)
-    tags = models.ManyToManyField(Tags,verbose_name="タグ")
+    detail = models.TextField(verbose_name="説明",blank=True,null=True)
+    image = models.ImageField(verbose_name="画像",blank=True,null=True)
+    tags = models.ManyToManyField(Tags,verbose_name="タグ",blank=True,null=True)
     platform = models.ManyToManyField(Platform,verbose_name="プラットフォーム")
     update_at = models.DateTimeField(verbose_name="更新日時",auto_now=True)
 
@@ -35,9 +56,15 @@ class Game(models.Model):
 
 class Talkroom(models.Model):
     """トークルームモデル"""
+    id = models.UUIDField(
+        default=uuid_lib.uuid4,
+        primary_key=True,
+        editable=False,
+    )
     game = models.ForeignKey(Game,verbose_name="ゲーム",on_delete=models.CASCADE)
     recruit_num = models.IntegerField(verbose_name='募集人数')
     gender = [
+        ("AL","誰でも"),
         ("MA","男性"),
         ("FE","女性"),
         ("EX","その他"),
@@ -59,12 +86,13 @@ class Talkroom(models.Model):
 
 class Talk(models.Model):
     """トークモデル"""
+    id = models.UUIDField(
+        default=uuid_lib.uuid4,
+        primary_key=True,
+        editable=False,
+    )
     talkroom = models.ForeignKey(Talkroom,verbose_name="トークルームID",on_delete=models.CASCADE)
     username = models.ForeignKey(CustomUser,verbose_name="ユーザー名",on_delete=models.PROTECT)
     talktext = models.CharField(verbose_name="内容テキスト",max_length=200,blank=True,null=True)
-    talkfile = models.FileField(verbose_name="内容静的ファイル")
+    talkfile = models.FileField(verbose_name="内容静的ファイル",blank=True,null=True)
     send_at = models.TimeField(verbose_name="送信日時")
-
-
-
-
