@@ -45,8 +45,8 @@ class Game(models.Model):
     game_name =models.CharField(verbose_name="ゲーム名",max_length=50,unique=True)
     genre =models.ManyToManyField(Genre,verbose_name="ジャンル")
     detail = models.TextField(verbose_name="説明",blank=True,null=True)
-    image = models.ImageField(verbose_name="画像",blank=True,null=True)
-    tags = models.ManyToManyField(Tags,verbose_name="タグ",blank=True,null=True)
+    image = models.ImageField(verbose_name="画像",upload_to='images/',default='default.png')
+    tags = models.ManyToManyField(Tags,verbose_name="タグ",blank=True)
     platform = models.ManyToManyField(Platform,verbose_name="プラットフォーム")
     update_at = models.DateTimeField(verbose_name="更新日時",auto_now=True)
 
