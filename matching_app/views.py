@@ -1,34 +1,15 @@
-from django.shortcuts import render
 from django.views.generic import View
-
+from . import models
+from rest_framework import viewsets
+from . import serializers
 # Create your views here.
 
-class TopPageView(View):
-    pass
+class GameViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = models.Game.objects.all()[:10]
+    serializer_class = serializers.GameItemSerializer
 
-class VerificationView(View):
-    pass
-
-class HostformView(View):
-    pass
-
-class GameView(View):
-    pass
-
-class GuestconfirmationView(View):
-    pass
-
-class TalkroomView(View):
-    pass
-
-class NftindexView(View):
-    pass
-
-class NftdoneView(View):
-    pass
-
-class ProfileView(View):
-    pass
-
-class Profile_editView(View):
-    pass
+class TalkroomViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = serializers.TalkItemSerializer
+    def get_queryset(self):
+        talkroom = models.Talkroom.objects.get(users_ID=self.request.user)
+        return models.Talk.objects.filter(talkroom=talkroom.id)

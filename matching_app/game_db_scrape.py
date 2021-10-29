@@ -50,7 +50,7 @@ def start_scrape():
                         data = f.read()
                         with open('./media/images/sumgames_{}_{}.png'.format(i,j), mode='wb') as local_file:
                             local_file.write(data)
-                    game_obj.image = image
+                    game_obj.image = 'images/sumgames_{}_{}.png'.format(i,j)
                 except HTTPError:
                     pass
             

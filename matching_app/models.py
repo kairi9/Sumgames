@@ -45,10 +45,13 @@ class Game(models.Model):
     game_name =models.CharField(verbose_name="ゲーム名",max_length=50,unique=True)
     genre =models.ManyToManyField(Genre,verbose_name="ジャンル")
     detail = models.TextField(verbose_name="説明",blank=True,null=True)
-    image = models.ImageField(verbose_name="画像",upload_to='images/',default='default.png')
+    image = models.ImageField(verbose_name="画像",upload_to='images/',default='images/default.png')
     tags = models.ManyToManyField(Tags,verbose_name="タグ",blank=True)
     platform = models.ManyToManyField(Platform,verbose_name="プラットフォーム")
     update_at = models.DateTimeField(verbose_name="更新日時",auto_now=True)
+
+    def get_data_as_json(self):
+        pass
 
     def __str__(self):
         return self.game_name
@@ -72,13 +75,13 @@ class Talkroom(models.Model):
     recruit_gender = models.CharField(
         max_length=2,
         choices=gender,
-        default="MA",
+        default="AL",
     )
     recruit_platform = models.ManyToManyField(Platform,verbose_name="プラットフォーム")
     users_ID = models.ManyToManyField(CustomUser,verbose_name="ユーザーID")
-    recruit_con = models.TextField(verbose_name='募集内容',null=True)
+    recruit_con = models.TextField(verbose_name='募集内容',default="誰でも気軽に参加してください。")
     under_recruitment = models.BooleanField(verbose_name="募集中",default=True)
-    create_at = models.TimeField(verbose_name="作成日時",auto_now_add=True)
+    create_at = models.DateTimeField(verbose_name="作成日時",auto_now_add=True)
 
     class Meta:
         ordering=['-create_at']
@@ -95,4 +98,6 @@ class Talk(models.Model):
     username = models.ForeignKey(CustomUser,verbose_name="ユーザー名",on_delete=models.PROTECT)
     talktext = models.CharField(verbose_name="内容テキスト",max_length=200,blank=True,null=True)
     talkfile = models.FileField(verbose_name="内容静的ファイル",blank=True,null=True)
-    send_at = models.TimeField(verbose_name="送信日時")
+    send_at = models.DateTimeField(verbose_name="送信日時",auto_now_add=True)
+    def __str__(self):
+        return self.send_at
