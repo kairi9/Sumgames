@@ -50,9 +50,6 @@ class Game(models.Model):
     platform = models.ManyToManyField(Platform,verbose_name="プラットフォーム")
     update_at = models.DateTimeField(verbose_name="更新日時",auto_now=True)
 
-    def get_data_as_json(self):
-        pass
-
     def __str__(self):
         return self.game_name
 
@@ -70,7 +67,6 @@ class Talkroom(models.Model):
         ("AL","誰でも"),
         ("MA","男性"),
         ("FE","女性"),
-        ("EX","その他"),
     ]
     recruit_gender = models.CharField(
         max_length=2,

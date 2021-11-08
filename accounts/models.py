@@ -16,5 +16,15 @@ class CustomUser(AbstractUser):
     """拡張ユーザモデル"""
     #host = models.BooleanField(verbose_name="ホスト",default=False)
     #guest = models.BooleanField(verbose_name="ゲスト",default=False)
+    gender_list = [
+        ("MA","男性"),
+        ("FE","女性"),
+        ("EX","その他"),
+    ]
+    gender = models.CharField(
+        max_length=2,
+        choices=gender_list,
+        default="MA",
+    )
     class Meta:
         verbose_name_plural='CustomUser'
