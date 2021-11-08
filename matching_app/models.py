@@ -101,3 +101,17 @@ class Talk(models.Model):
     send_at = models.DateTimeField(verbose_name="送信日時",auto_now_add=True)
     def __str__(self):
         return self.send_at
+    
+class Inquiry(models.Model):
+    """お問い合わせモデル"""
+    id = models.UUIDField(
+        default=uuid_lib.uuid4,
+        primary_key=True,
+        editable=False,
+    )
+    userID = models.ForeignKey(CustomUser,verbose_name="ユーザーID",on_delete=models.PROTECT)
+    inquiry_title = models.CharField(verbose_name="お問い合わせ要件",max_length=50)
+    inquiry_context = models.TextField(verbose_name="お問い合わせ内容")
+    send_at = models.DateTimeField(verbose_name="送信日時",auto_now_add=True)
+    def __str__(self):
+        return self.inquiry_title
