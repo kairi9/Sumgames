@@ -75,7 +75,7 @@ class Talkroom(models.Model):
     )
     recruit_platform = models.ManyToManyField(Platform,verbose_name="プラットフォーム")
     users_ID = models.ManyToManyField(CustomUser,verbose_name="ユーザーID")
-    recruit_con = models.TextField(verbose_name='募集内容',default="誰でも気軽に参加してください。")
+    recruit_context = models.TextField(verbose_name='募集内容',default="誰でも気軽に参加してください。")
     under_recruitment = models.BooleanField(verbose_name="募集中",default=True)
     create_at = models.DateTimeField(verbose_name="作成日時",auto_now_add=True)
 
