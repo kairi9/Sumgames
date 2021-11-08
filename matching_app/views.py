@@ -1,4 +1,3 @@
-from django.views.generic import View
 from . import models
 from rest_framework import viewsets
 from . import serializers

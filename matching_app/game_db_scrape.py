@@ -44,15 +44,7 @@ def start_scrape():
             #画像
             image = images.find('img').get('data-src')
             if not image == '/img/dummylogo.png':
-                try:
-                    request = req.Request(urljoin('https://www.gamer.ne.jp',image), headers=headers)
-                    with req.urlopen(request) as f:
-                        data = f.read()
-                        with open('./media/images/sumgames_{}_{}.png'.format(i,j), mode='wb') as local_file:
-                            local_file.write(data)
-                    game_obj.image = 'images/sumgames_{}_{}.png'.format(i,j)
-                except HTTPError:
-                    pass
+                game_obj.image = 'images/sumgames_{}_{}.png'.format(i,j)
             
             #ゲーム説明
             detail = text.find('p',attrs={"class": "catchcopy"}).text
@@ -63,6 +55,15 @@ def start_scrape():
                 game_obj.save()
             except IntegrityError:
                 continue
+
+            try:
+                request = req.Request(urljoin('https://www.gamer.ne.jp',image), headers=headers)
+                with req.urlopen(request) as f:
+                    data = f.read()
+                    with open('./media/images/sumgames_{}_{}.png'.format(i,j), mode='wb') as local_file:
+                        local_file.write(data)
+            except HTTPError:
+                pass
 
 
             for g_name in genre_list:

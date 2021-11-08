@@ -14,3 +14,9 @@ class TalkItemSerializer(serializers.ModelSerializer):
         model = models.Talk
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
         fields = '__all__'
+
+class InquiryItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Inquiry
+        # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
+        fields = ('inquiry_title', 'inquiry_context')
