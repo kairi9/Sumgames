@@ -1,3 +1,4 @@
+from django.db.models import fields
 from rest_framework import serializers
 from . import models
 
@@ -20,3 +21,15 @@ class InquiryItemSerializer(serializers.ModelSerializer):
         model = models.Inquiry
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
         fields = ('inquiry_title', 'inquiry_context')
+
+class GuestConfirmationItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Talkroom
+        # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
+        fields = ('id','game','recruit_platform','recruit_context')
+        depth=1
+    
+#class Tallkroom(serializers.ModelSerializer):
+  #  class Meta:
+ #       model = models.Talkroom
+#        fields = ('talktext')
