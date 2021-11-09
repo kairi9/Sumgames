@@ -21,3 +21,7 @@ app_name = 'matching'
 router = routers.DefaultRouter()
 router.register(r'gameitem', views.GameViewSet,basename='gameitem')
 router.register(r'talkitem', views.TalkroomViewSet,basename='talkitem')
+router.register(r'talkroomitem', views.HostViewSet,basename='hostitem')
+router.register(r'inquiryitem', views.InquiryViewSet,basename='inquiryitem')
+router.register(r'inquiry', views.InquiryViewSet,basename='InquiryItemSerializeritem')
+router.register(r'guestconfirmationitem',views.GuestConfirmationViewSet,basename='guestconfirmationitem')

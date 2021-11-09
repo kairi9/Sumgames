@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 from accounts.models import CustomUser
 import uuid as uuid_lib
 
@@ -62,7 +63,7 @@ class Talkroom(models.Model):
         editable=False,
     )
     game = models.ForeignKey(Game,verbose_name="ゲーム",on_delete=models.CASCADE)
-    recruit_num = models.IntegerField(verbose_name='募集人数')
+    recruit_num = models.IntegerField(verbose_name='募集人数',validators=[MinValueValidator(1,"1人以上募集してください")])
     gender = [
         ("AL","誰でも"),
         ("MA","男性"),
@@ -96,7 +97,7 @@ class Talk(models.Model):
     talkfile = models.FileField(verbose_name="内容静的ファイル",blank=True,null=True)
     send_at = models.DateTimeField(verbose_name="送信日時",auto_now_add=True)
     def __str__(self):
-        return self.send_at
+        return str(self.username)+" "+str(self.send_at)
     
 class Inquiry(models.Model):
     """お問い合わせモデル"""
