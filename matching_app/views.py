@@ -1,3 +1,4 @@
+from django.db.models.query import QuerySet
 from . import models
 from rest_framework import viewsets
 from . import serializers
@@ -30,3 +31,18 @@ class InquiryViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         inquiry = models.Inquiry.objects.get(users_ID=self.request.user)
         return models.Inquiry.objects.filter(inquiry=inquiry.id)
+
+class GuestConfirmationViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = serializers.GuestConfirmationItemSerializer
+    def get_queryset(self):
+        user = self.request.user
+        gender = user.gender
+        if gender == "EX":
+            queryset = models.Talkroom.objects.filter(under_recruitment=True,recruit_gender="AL")
+        elif gender =="FE":
+            queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="MA")
+        else:
+            queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="FE")
+        return queryset
+
+

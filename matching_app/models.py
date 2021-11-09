@@ -97,7 +97,7 @@ class Talk(models.Model):
     talkfile = models.FileField(verbose_name="内容静的ファイル",blank=True,null=True)
     send_at = models.DateTimeField(verbose_name="送信日時",auto_now_add=True)
     def __str__(self):
-        return self.send_at
+        return str(self.username)+" "+str(self.send_at)
     
 class Inquiry(models.Model):
     """お問い合わせモデル"""
