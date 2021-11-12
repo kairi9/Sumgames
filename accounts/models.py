@@ -6,6 +6,7 @@ from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
+import uuid as uuid_lib
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
@@ -14,8 +15,11 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
 
 class CustomUser(AbstractUser):
     """拡張ユーザモデル"""
-    #host = models.BooleanField(verbose_name="ホスト",default=False)
-    #guest = models.BooleanField(verbose_name="ゲスト",default=False)
+    id = models.UUIDField(
+        default=uuid_lib.uuid4,
+        primary_key=True,
+        editable=False,
+    )
     gender_list = [
         ("MA","男性"),
         ("FE","女性"),
