@@ -44,10 +44,10 @@ class HostViewSet(viewsets.ModelViewSet):
     
 
 class InquiryViewSet(viewsets.ModelViewSet):
-    serializers_class = serializers.InquiryItemSerializer
+    serializer_class = serializers.InquiryItemSerializer
     def get_queryset(self):
-        inquiry = models.Inquiry.objects.get(users_ID=self.request.user)
-        return models.Inquiry.objects.filter(inquiry=inquiry.id)
+        inquiry = models.Inquiry.objects.filter(userID=self.request.user)
+        return inquiry
 
 class GuestConfirmationViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = serializers.GuestConfirmationItemSerializer
