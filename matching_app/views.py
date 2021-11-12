@@ -1,19 +1,33 @@
+from typing import Counter
 from django.db.models.query import QuerySet
+from django.db.models import Count
+from rest_framework.response import Response
 from . import models
 from rest_framework import viewsets
 from . import serializers
 # Create your views here.
 
-""" class GameViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = models.Game.objects.all()[:10]
-    serializer_class = serializers.GameItemSerializer """
     
 class GameViewSet(viewsets.ModelViewSet):
-    queryset = models.Game.objects.all()[:3]
     serializer_class = serializers.GameItemSerializer
-    """ def get_queryset(self):
-        game = models.Game.objects.get(game_name = self.request.user)
-        return models.Game.objects.all(game = game.id) """
+    def get_queryset(self):
+        # game_id = self.kwargs['id']
+        return models.Game.objects.all()[:10]
+    
+    def talk_ratio(self):
+        talkroom_people = models.Talkroom.objects.all().aggregate(Count('users_ID'))
+        all_talkroom = models.Talkroom.objects.count()
+        ratio_data = {
+            "all":talkroom_people,
+            "host":all_talkroom,
+        }
+        return ratio_data
+    
+    def retrieve(self, request, pk=None):
+        queryset = models.Game.objects.get(pk=pk)
+        ratio_data = self.talk_ratio()
+        serializer = serializers.GameItemSerializer(queryset,context={"host_ratio":ratio_data["host"],"all_count":ratio_data["all"]})
+        return Response(serializer.data)
 
 class TalkroomViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = serializers.TalkItemSerializer
@@ -24,6 +38,9 @@ class TalkroomViewSet(viewsets.ReadOnlyModelViewSet):
 class HostViewSet(viewsets.ModelViewSet):
     queryset = models.Talkroom.objects.all()[:1]
     serializer_class = serializers.TalkroomItemSerializer
+    """ def get_queryset(self):
+        game = self.kwargs['game']
+        return models.Talkroom.objects.filter(talkroom__game=game) """
     
 
 class InquiryViewSet(viewsets.ModelViewSet):

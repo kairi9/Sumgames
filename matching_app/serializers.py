@@ -11,10 +11,12 @@ from . import models
         depth = 1 """
         
 class GameItemSerializer(serializers.ModelSerializer):
+    host_ratio = serializers.IntegerField(read_only=True)
+    all_count = serializers.IntegerField(read_only=True)
     class Meta:
         model = models.Game
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
-        fields = ('game_name', 'genre', 'detail', 'image', 'tags', 'platform')
+        fields = ('id', 'game_name', 'genre', 'detail', 'image', 'tags', 'platform','host_ratio','all_count')
         depth = 1
 
 class TalkItemSerializer(serializers.ModelSerializer):
