@@ -7,7 +7,7 @@ from rest_framework import viewsets
 from . import serializers
 # Create your views here.
 
-    
+#たける
 class GameViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.GameItemSerializer
     def get_queryset(self):
@@ -29,26 +29,36 @@ class GameViewSet(viewsets.ModelViewSet):
         serializer = serializers.GameItemSerializer(queryset,context={"host_ratio":ratio_data["host"],"all_count":ratio_data["all"]})
         return Response(serializer.data)
 
-class TalkroomViewSet(viewsets.ReadOnlyModelViewSet):
+#たける
+class Talk(viewsets.ModelViewSet):
+    pass
+
+#宋
+class TalkroomViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.TalkItemSerializer
     def get_queryset(self):
         talkroom = models.Talkroom.objects.get(users_ID=self.request.user)
         return models.Talk.objects.filter(talkroom=talkroom.id)
 
-class HostViewSet(viewsets.ModelViewSet):
-    queryset = models.Talkroom.objects.all()[:1]
-    serializer_class = serializers.TalkroomItemSerializer
-    """ def get_queryset(self):
-        game = self.kwargs['game']
-        return models.Talkroom.objects.filter(talkroom__game=game) """
-    
+    def create(self,request):
+        pass
 
+# class HostViewSet(viewsets.ModelViewSet):
+#     queryset = models.Talkroom.objects.all()[:1]
+#     serializer_class = serializers.TalkroomItemSerializer
+#     """ def get_queryset(self):
+#         game = self.kwargs['game']
+#         return models.Talkroom.objects.filter(talkroom__game=game) """
+
+
+#宋
 class InquiryViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.InquiryItemSerializer
     def get_queryset(self):
         inquiry = models.Inquiry.objects.filter(userID=self.request.user)
         return inquiry
 
+#宋
 class GuestConfirmationViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = serializers.GuestConfirmationItemSerializer
     def get_queryset(self):
