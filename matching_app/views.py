@@ -43,14 +43,6 @@ class TalkroomViewSet(viewsets.ModelViewSet):
     def create(self,request):
         pass
 
-# class HostViewSet(viewsets.ModelViewSet):
-#     queryset = models.Talkroom.objects.all()[:1]
-#     serializer_class = serializers.TalkroomItemSerializer
-#     """ def get_queryset(self):
-#         game = self.kwargs['game']
-#         return models.Talkroom.objects.filter(talkroom__game=game) """
-
-
 #宋
 class InquiryViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.InquiryItemSerializer
