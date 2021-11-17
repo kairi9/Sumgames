@@ -61,14 +61,39 @@ class Talk(viewsets.ModelViewSet):
 #宋
 class TalkroomViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.TalkroomItemSerializer
-    queryset = models.Talkroom.objects.all()
+    def get_queryset(self):
+        inquiry = models.Inquiry.objects.filter(userID=self.request.user)
+        return inquiry
 
-# class HostViewSet(viewsets.ModelViewSet):
-#     queryset = models.Talkroom.objects.all()[:1]
-#     serializer_class = serializers.TalkroomItemSerializer
-#     """ def get_queryset(self):
-#         game = self.kwargs['game']
-#         return models.Talkroom.objects.filter(talkroom__game=game) """
+    #ページネーション未実装
+    def list(self, request):
+        user = request.user
+        gender = user.gender
+        queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="FE")
+        if gender == "EX":
+            queryset = models.Talkroom.objects.filter(under_recruitment=True,recruit_gender="AL")
+        elif gender =="FE":
+            queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="MA")
+        serializer = serializers.TalkroomItemSerializer(queryset,many=True)
+        return Response(serializer.data)
+    
+    def retrieve(self, request, pk=None):
+        queryset = models.Talkroom.objects.get(pk=pk)
+        serializer = serializers.TalkroomItemSerializer(queryset)
+        return Response(serializer.data)
+
+    def create(self,request):
+        serializer = serializers.TalkroomItemSerializer(data=request.data,context={'userID':request.user})
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(status=200)
+
+    def partial_update(self, request, pk=None):
+        talkroom = models.Talkroom.objects.get(pk=pk)
+        serializer = serializers.TalkroomItemSerializer(talkroom,data=request.data,partial=True,context={'userID':request.user})
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
 
 
 #宋
@@ -77,19 +102,10 @@ class InquiryViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         inquiry = models.Inquiry.objects.filter(userID=self.request.user)
         return inquiry
-
-#宋
-class GuestConfirmationViewSet(viewsets.ReadOnlyModelViewSet):
-    serializer_class = serializers.GuestConfirmationItemSerializer
-    def get_queryset(self):
-        user = self.request.user
-        gender = user.gender
-        if gender == "EX":
-            queryset = models.Talkroom.objects.filter(under_recruitment=True,recruit_gender="AL")
-        elif gender =="FE":
-            queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="MA")
-        else:
-            queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="FE")
-        return queryset
-
+    
+    def create(self,request):
+        serializer = serializers.InquiryItemSerializer(data=request.data, context={'userID':request.user})
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(status=200)
 
