@@ -3,16 +3,26 @@ from django.db.models.query import QuerySet
 from django.db.models import Count
 from rest_framework.response import Response
 from . import models
-from rest_framework import viewsets
+from rest_framework import viewsets,filters,generics
 from . import serializers
-# Create your views here.
 
+# Create your views here.
 #たける
+def get_ranking():
+    games = {}
+    for obj in models.Talkroom.objects.annotate(Count('users_ID')):
+        if  obj.game not in games.keys():
+            games[obj.game] = obj.users_ID__count
+        else:
+            games[obj.game] = games[obj.game]+obj.users_ID__count
+    sorted_games = sorted(games.items(), key=lambda x:x[1],reverse=True)
+    return [x[0] for x in sorted_games]
+
 class GameViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.GameItemSerializer
     def get_queryset(self):
-        # game_id = self.kwargs['id']
-        return models.Game.objects.all()[:10]
+        queryset = models.Game.objects.all()[:10]
+        return queryset
     
     def talk_ratio(self):
         talkroom_people = models.Talkroom.objects.all().aggregate(Count('users_ID'))
@@ -23,11 +33,26 @@ class GameViewSet(viewsets.ModelViewSet):
         }
         return ratio_data
     
+    def list(self, request):
+        #ranking
+        queryset = get_ranking()        
+        keyword = self.request.query_params.get('search')
+        if keyword is not None:
+            name_qs = models.Game.objects.filter(game_name__icontains=keyword)
+            detail_qs = models.Game.objects.filter(detail__icontains=keyword)
+            genre_qs = models.Game.objects.filter(genre__genrename__icontains=keyword)
+            tags_qs = models.Game.objects.filter(tags__tag_name__icontains=keyword)
+            queryset = name_qs.union(detail_qs,genre_qs,tags_qs)
+        serializer = serializers.GameItemSerializer(queryset,many=True)
+        return Response(serializer.data)
+    
     def retrieve(self, request, pk=None):
         queryset = models.Game.objects.get(pk=pk)
         ratio_data = self.talk_ratio()
-        serializer = serializers.GameItemSerializer(queryset,context={"host_ratio":ratio_data["host"],"all_count":ratio_data["all"]})
+        search = self.get_search()
+        serializer = serializers.GameItemSerializer(queryset,search,context={"host_ratio":ratio_data["host"],"all_count":ratio_data["all"]})
         return Response(serializer.data)
+
 
 #たける
 class Talk(viewsets.ModelViewSet):
@@ -35,13 +60,8 @@ class Talk(viewsets.ModelViewSet):
 
 #宋
 class TalkroomViewSet(viewsets.ModelViewSet):
-    serializer_class = serializers.TalkItemSerializer
-    def get_queryset(self):
-        talkroom = models.Talkroom.objects.get(users_ID=self.request.user)
-        return models.Talk.objects.filter(talkroom=talkroom.id)
-
-    def create(self,request):
-        pass
+    serializer_class = serializers.TalkroomItemSerializer
+    queryset = models.Talkroom.objects.all()
 
 # class HostViewSet(viewsets.ModelViewSet):
 #     queryset = models.Talkroom.objects.all()[:1]

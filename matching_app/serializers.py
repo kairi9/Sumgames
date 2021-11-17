@@ -1,22 +1,13 @@
-from django.db.models import fields
 from rest_framework import serializers
 from . import models
 
-""" class GameItemSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.Game
-        # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
-        #fields = ('id', 'game_name', 'genre', 'detail', 'image', 'tags', 'platform')
-        exclude = ['update_at']
-        depth = 1 """
-        
 class GameItemSerializer(serializers.ModelSerializer):
-    host_ratio = serializers.IntegerField(read_only=True)
-    all_count = serializers.IntegerField(read_only=True)
+    # host_ratio = serializers.IntegerField(read_only=True)
+    # all_count = serializers.IntegerField(read_only=True)
     class Meta:
         model = models.Game
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
-        fields = ('id', 'game_name', 'genre', 'detail', 'image', 'tags', 'platform','host_ratio','all_count')
+        exclude = ['update_at']
         depth = 1
 
 class TalkItemSerializer(serializers.ModelSerializer):
@@ -42,8 +33,3 @@ class GuestConfirmationItemSerializer(serializers.ModelSerializer):
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
         fields = ('id','game','recruit_platform','recruit_context')
         depth=1
-    
-#class Tallkroom(serializers.ModelSerializer):
-  #  class Meta:
- #       model = models.Talkroom
-#        fields = ('talktext')
