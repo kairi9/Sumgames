@@ -49,14 +49,27 @@ class GameViewSet(viewsets.ModelViewSet):
     def retrieve(self, request, pk=None):
         queryset = models.Game.objects.get(pk=pk)
         ratio_data = self.talk_ratio()
-        search = self.get_search()
-        serializer = serializers.GameItemSerializer(queryset,search,context={"host_ratio":ratio_data["host"],"all_count":ratio_data["all"]})
+        serializer = serializers.GameItemSerializer(queryset,context={"host_ratio":ratio_data["host"],"all_count":ratio_data["all"]})
         return Response(serializer.data)
 
 
 #たける
-class Talk(viewsets.ModelViewSet):
-    pass
+class TalkViewSet(viewsets.ModelViewSet):
+    serializer_class = serializers.TalkItemSerializer
+    def get_queryset(self):
+        user = self.request.user
+        talkroom = models.Talkroom.objects.get(users_ID__pk = user.pk)
+        queryset = models.Talk.objects.filter(talkroom = talkroom)
+        return queryset
+    
+    def create(self, request):
+        user = request.user
+        talkroom = models.Talkroom.objects.get(users_ID__pk = user.pk)
+        serializer = serializers.TalkItemSerializer(data=request.data,context={'userID':user,'talkroom':talkroom})
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(status=200)
+        
 
 #宋
 class TalkroomViewSet(viewsets.ModelViewSet):
@@ -94,6 +107,11 @@ class TalkroomViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
+    
+    def destroy(self, request, pk=None):
+        queryset = models.Talkroom.objects.get(pk=pk)
+        data = queryset.delete()
+        return Response(data)
 
 
 #宋

@@ -15,6 +15,21 @@ class TalkItemSerializer(serializers.ModelSerializer):
         model = models.Talk
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
         fields = '__all__'
+        extra_kwargs = {
+            'talkroom': {'read_only': True},
+            'username': {'read_only': True},
+            'send_at': {'read_only': True}
+        }
+    
+    def create(self, validated_data):
+        talk = models.Talk(
+            talktext = validated_data['talktext'],
+            talkfile = validated_data['talkfile'],
+        )
+        talk.username = self.context['userID']
+        talk.talkroom = self.context['talkroom']
+        talk.save()
+        return talk
 
 class TalkroomItemSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,7 +39,6 @@ class TalkroomItemSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         talkroom = models.Talkroom(
             game = validated_data['game'],
-           
             recruit_num = validated_data['recruit_num'],
             recruit_gender = validated_data['recruit_gender'],
             recruit_context = validated_data['recruit_context']

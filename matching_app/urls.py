@@ -6,5 +6,6 @@ from . import views
 app_name = 'matching'
 router = routers.DefaultRouter()
 router.register(r'gameitem', views.GameViewSet,basename='gameitem')
+router.register(r'talk', views.TalkViewSet,basename='talk')
 router.register(r'talkroom', views.TalkroomViewSet,basename='talkroom')
 router.register(r'inquiry', views.InquiryViewSet,basename='inquiry')
