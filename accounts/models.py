@@ -30,5 +30,6 @@ class CustomUser(AbstractUser):
         choices=gender_list,
         default="MA",
     )
+    introduction = models.TextField(verbose_name="自己紹介",blank=True,null=True,default="よろしくお願いします！")
     class Meta:
         verbose_name_plural='CustomUser'
