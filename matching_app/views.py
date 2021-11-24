@@ -68,7 +68,7 @@ class TalkViewSet(viewsets.ModelViewSet):
         serializer = serializers.TalkItemSerializer(data=request.data,context={'userID':user,'talkroom':talkroom})
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response(status=200)
+        return Response(serializer.data)
         
 
 #宋
