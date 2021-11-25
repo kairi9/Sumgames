@@ -1,9 +1,7 @@
-from typing import Counter
-from django.db.models.query import QuerySet
 from django.db.models import Count
 from rest_framework.response import Response
 from . import models
-from rest_framework import viewsets,filters,generics
+from rest_framework import viewsets
 from . import serializers
 from django.views import generic
 
@@ -21,9 +19,10 @@ def get_ranking():
         else:
             games[obj.game] = games[obj.game]+obj.users_ID__count
     sorted_games = sorted(games.items(), key=lambda x:x[1],reverse=True)
-    return [x[0] for x in sorted_games]
+    return [x[0] for x in sorted_games] + [y for y in models.Game.objects.all()[:10-len(sorted_games)]]
 
-class GameViewSet(viewsets.ModelViewSet):
+
+class GameViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = serializers.GameItemSerializer
     def get_queryset(self):
         queryset = models.Game.objects.all()[:10]
@@ -73,7 +72,7 @@ class TalkViewSet(viewsets.ModelViewSet):
         serializer = serializers.TalkItemSerializer(data=request.data,context={'userID':user,'talkroom':talkroom})
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response(status=200)
+        return Response(serializer.data)
         
 
 #宋
