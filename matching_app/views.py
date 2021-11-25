@@ -5,8 +5,13 @@ from rest_framework.response import Response
 from . import models
 from rest_framework import viewsets,filters,generics
 from . import serializers
+from django.views import generic
 
 # Create your views here.
+class TopPageView(generic.TemplateView):
+    template_name = "matching_app/index.html"
+    
+
 #たける
 def get_ranking():
     games = {}

@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('accounts/', include('accounts.urls')),
+    path('', include('matching_app.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
