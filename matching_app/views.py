@@ -69,7 +69,6 @@ class TalkViewSet(viewsets.ModelViewSet):
         serializer.save()
         return Response(serializer.data)
         
-
 #宋
 class TalkroomViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.TalkroomItemSerializer
