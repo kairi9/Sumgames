@@ -31,5 +31,6 @@ class CustomUser(AbstractUser):
         default="MA",
     )
     introduction = models.TextField(verbose_name="自己紹介",blank=True,null=True,default="よろしくお願いします！")
+    image = models.ImageField(verbose_name="画像",upload_to='images/',default='images/default.png')
     class Meta:
         verbose_name_plural='CustomUser'
