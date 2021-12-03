@@ -28,11 +28,11 @@ class GameViewSet(viewsets.ReadOnlyModelViewSet):
         queryset = models.Game.objects.all()[:10]
         return queryset
     
-    def talk_ratio(self):
-        talkroom_people = models.Talkroom.objects.all().aggregate(Count('users_ID'))
-        all_talkroom = models.Talkroom.objects.count()
+    def talk_ratio(self,pk):
+        talkroom_people = models.Talkroom.objects.filter(game=pk).aggregate(Count('users_ID'))
+        all_talkroom = models.Talkroom.objects.filter(game=pk).count()
         ratio_data = {
-            "all":talkroom_people,
+            "guest":talkroom_people["users_ID__count"]-all_talkroom,
             "host":all_talkroom,
         }
         return ratio_data
@@ -52,9 +52,10 @@ class GameViewSet(viewsets.ReadOnlyModelViewSet):
     
     def retrieve(self, request, pk=None):
         queryset = models.Game.objects.get(pk=pk)
-        ratio_data = self.talk_ratio()
-        serializer = serializers.GameItemSerializer(queryset,context={"host_ratio":ratio_data["host"],"all_count":ratio_data["all"]})
-        return Response(serializer.data)
+        serializer = serializers.GameItemSerializer(queryset)
+        response_data= serializer.data
+        response_data.update(self.talk_ratio(pk))
+        return Response(response_data)
 
 
 #たける

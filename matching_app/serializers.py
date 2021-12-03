@@ -2,8 +2,6 @@ from rest_framework import serializers
 from . import models
 
 class GameItemSerializer(serializers.ModelSerializer):
-    # host_ratio = serializers.IntegerField(read_only=True)
-    # all_count = serializers.IntegerField(read_only=True)
     class Meta:
         model = models.Game
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
