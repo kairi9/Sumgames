@@ -5,7 +5,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
-        fields = ('username', 'password', 'first_name', 'last_name', 'email', 'gender','introduction')
+        fields = ('username', 'password', 'first_name', 'last_name', 'email', 'gender','introduction','image')
         extra_kwargs = {'password': {'write_only': True}}
     
     def create(self, validated_data):
@@ -26,6 +26,7 @@ class UserSerializer(serializers.ModelSerializer):
         instance.email = validated_data.get('email', instance.email)
         instance.gender = validated_data.get('gender', instance.gender)
         instance.introduction = validated_data.get('introduction', instance.introduction)
+        instance.image = validated_data.get('image', instance.image)
         instance.save()
         return instance
 
