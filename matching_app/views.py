@@ -176,17 +176,14 @@ class TalkroomViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['post'], permission_classes=[IsAdminOrIsSelf])
     def exit_talkroom(self, request, pk=None):
         talkroom = models.Talkroom.objects.get(pk=pk)
-        talks = models.Talk.objects.filter(talkroom = talkroom)
-        for talk in talks:
-            if talk.talkfile is not None:
-                os.remove(talk.talkfile.path)
-        if request.user == talkroom.host_user:
+        if request.user == talkroom.host_user or talkroom.guest_user.all().count() < 1:
+            talks = models.Talk.objects.filter(talkroom = talkroom)
+            for talk in talks:
+                if talk.talkfile is not None:
+                    os.remove(talk.talkfile.path)
             talkroom.delete()
             return Response({"detail":"deleted"})
         talkroom.guest_user.remove(request.user)
-        if talkroom.guest_user.all().count() < 1:
-            talkroom.delete()
-            return Response({"detail":"deleted"})
         talkroom.save()
         serializer = serializers.TalkroomItemSerializer(talkroom)
         return Response(serializer.data)
