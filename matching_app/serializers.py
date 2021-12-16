@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from drf_base64.serializers import ModelSerializer
 from . import models
 
 class GameItemSerializer(serializers.ModelSerializer):
@@ -8,14 +9,14 @@ class GameItemSerializer(serializers.ModelSerializer):
         exclude = ['update_at']
         depth = 1
 
-class TalkItemSerializer(serializers.ModelSerializer):
+class TalkItemSerializer(ModelSerializer):
     class Meta:
         model = models.Talk
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
         fields = '__all__'
         extra_kwargs = {
             'talkroom': {'read_only': True},
-            'username': {'read_only': True},
+            'user': {'read_only': True},
             'send_at': {'read_only': True}
         }
     
@@ -24,7 +25,7 @@ class TalkItemSerializer(serializers.ModelSerializer):
             talktext = validated_data['talktext'],
             talkfile = validated_data['talkfile'],
         )
-        talk.username = self.context['userID']
+        talk.user = self.context['userID']
         talk.talkroom = self.context['talkroom']
         talk.save()
         return talk
@@ -32,21 +33,25 @@ class TalkItemSerializer(serializers.ModelSerializer):
 class TalkroomItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Talkroom
-        fields = ('id','game', 'recruit_platform', 'recruit_num', 'recruit_gender', 'recruit_context')
+        fields = ('id','game', 'recruit_platform', 'recruit_num', 'recruit_gender', 'recruit_context','host_user','guest_user')
+        extra_kwargs = {
+            'id': {'read_only': True},
+            'host_user': {'read_only': True},
+            'guest_user': {'read_only': True},
+        }
 
     def create(self, validated_data):
         talkroom = models.Talkroom(
             game = validated_data['game'],
             recruit_num = validated_data['recruit_num'],
             recruit_gender = validated_data['recruit_gender'],
-            recruit_context = validated_data['recruit_context']
+            recruit_context = validated_data['recruit_context'],
+            host_user = self.context['userID']
         )
         talkroom.save()
         recruit_platform = validated_data['recruit_platform']
         for platform in recruit_platform:
             talkroom.recruit_platform.add(platform)
-        talkroom.users_ID.add(self.context['userID'])
-        
         return talkroom
 
     def update(self, instance, validated_data):
@@ -55,13 +60,8 @@ class TalkroomItemSerializer(serializers.ModelSerializer):
         instance.recruit_context = validated_data.get('recruit_context',instance.recruit_context)
         recruit_platform = [models.Platform.objects.get(platform_name=x) for x in validated_data.get('recruit_platform',instance.recruit_platform)]
         instance.recruit_platform.set(recruit_platform)
-        instance.users_ID.add(self.context['userID'])
-        users_num = instance.users_ID.all().count()
-        if users_num >= instance.recruit_num+1:
-            instance.under_recruitment = False
         instance.save()
         return instance
-
 
 
 class InquiryItemSerializer(serializers.ModelSerializer):

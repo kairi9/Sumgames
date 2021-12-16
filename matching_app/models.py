@@ -75,7 +75,8 @@ class Talkroom(models.Model):
         default="AL",
     )
     recruit_platform = models.ManyToManyField(Platform,verbose_name="プラットフォーム")
-    users_ID = models.ManyToManyField(CustomUser,verbose_name="ユーザーID")
+    host_user = models.ForeignKey(CustomUser,verbose_name="ホストユーザー",on_delete=models.PROTECT,related_name='host_user')
+    guest_user = models.ManyToManyField(CustomUser,verbose_name="ゲストユーザー",related_name='guest_user')
     recruit_context = models.TextField(verbose_name='募集内容',default="誰でも気軽に参加してください。")
     under_recruitment = models.BooleanField(verbose_name="募集中",default=True)
     create_at = models.DateTimeField(verbose_name="作成日時",auto_now_add=True)
@@ -92,12 +93,12 @@ class Talk(models.Model):
         editable=False,
     )
     talkroom = models.ForeignKey(Talkroom,verbose_name="トークルームID",on_delete=models.CASCADE)
-    username = models.ForeignKey(CustomUser,verbose_name="ユーザー名",on_delete=models.PROTECT)
+    user = models.ForeignKey(CustomUser,verbose_name="ユーザー名",on_delete=models.PROTECT)
     talktext = models.CharField(verbose_name="内容テキスト",max_length=200,blank=True,null=True)
-    talkfile = models.FileField(verbose_name="内容静的ファイル",blank=True,null=True)
+    talkfile = models.ImageField(verbose_name="内容画像",upload_to='talk_images/',blank=True,null=True)
     send_at = models.DateTimeField(verbose_name="送信日時",auto_now_add=True)
     def __str__(self):
-        return str(self.username)+" "+str(self.send_at)
+        return str(self.user)+" "+str(self.send_at)
     
 class Inquiry(models.Model):
     """お問い合わせモデル"""
