@@ -106,14 +106,22 @@ class TalkViewSet(viewsets.ModelViewSet):
 class TalkroomViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.TalkroomItemSerializer
     def get_queryset(self):
-        inquiry = models.Inquiry.objects.filter(userID=self.request.user)
-        return inquiry
+        user = self.request.user
+        gender = user.gender
+        queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="FE")
+        if gender == "EX":
+            queryset = models.Talkroom.objects.filter(under_recruitment=True,recruit_gender="AL")
+        elif gender =="FE":
+            queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="MA")
+        serializer = serializers.TalkroomItemSerializer(queryset,many=True)
+        return Response(serializer.data)
 
     #ページネーション未実装
     def list(self, request):
         user = request.user
         gender = user.gender
-        queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="FE")
+        game_id = request.query_params.get('game_id')
+        queryset = models.Talkroom.objects.filter(under_recruitment=True,game=game_id).exclude(recruit_gender="FE")
         if gender == "EX":
             queryset = models.Talkroom.objects.filter(under_recruitment=True,recruit_gender="AL")
         elif gender =="FE":

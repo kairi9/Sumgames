@@ -1,6 +1,8 @@
+from django.db.models import fields
 from rest_framework import serializers
 from drf_base64.serializers import ModelSerializer
 from . import models
+from accounts.models import CustomUser
 
 class GameItemSerializer(serializers.ModelSerializer):
     class Meta:
@@ -30,7 +32,16 @@ class TalkItemSerializer(ModelSerializer):
         talk.save()
         return talk
 
+class TalkroomUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ('username','image')
+
 class TalkroomItemSerializer(serializers.ModelSerializer):
+    game = serializers.StringRelatedField()
+    recruit_platform = serializers.StringRelatedField(many=True)
+    host_user = TalkroomUserSerializer(read_only=True)
+    guest_user = TalkroomUserSerializer(many=True,read_only=True)
     class Meta:
         model = models.Talkroom
         fields = ('id','game', 'recruit_platform', 'recruit_num', 'recruit_gender', 'recruit_context','host_user','guest_user')
