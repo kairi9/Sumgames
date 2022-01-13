@@ -44,7 +44,7 @@ class GameViewSet(viewsets.ReadOnlyModelViewSet):
     def list(self, request):
         #ranking
         queryset = get_ranking()
-        keyword = self.request.query_params.get('search')
+        keyword = request.query_params.get('search')
         if keyword is not None:
             name_qs = models.Game.objects.filter(game_name__icontains=keyword)
             detail_qs = models.Game.objects.filter(detail__icontains=keyword)
@@ -120,13 +120,13 @@ class TalkroomViewSet(viewsets.ModelViewSet):
     def list(self, request):
         user = request.user
         gender = user.gender
-        game_id = request.query_params.get('game_id')
-        queryset = models.Talkroom.objects.filter(under_recruitment=True,game=game_id).exclude(recruit_gender="FE")
+        keyword = request.query_params.get('game_id')
+        queryset = models.Talkroom.objects.filter(under_recruitment=True,game=keyword).exclude(recruit_gender="FE")
         if gender == "EX":
             queryset = models.Talkroom.objects.filter(under_recruitment=True,recruit_gender="AL")
         elif gender =="FE":
             queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="MA")
-        serializer = serializers.TalkroomItemSerializer(queryset,many=True)
+        serializer = serializers.TalkroomTinderSerializer(queryset,many=True)
         return Response(serializer.data)
     
     def retrieve(self, request, pk=None):

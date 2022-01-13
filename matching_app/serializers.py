@@ -32,10 +32,24 @@ class TalkItemSerializer(ModelSerializer):
         talk.save()
         return talk
 
-class TalkroomUserSerializer(serializers.ModelSerializer):
+class TalkroomTinderUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ('username','image')
+
+class TalkroomTinderSerializer(serializers.ModelSerializer):
+    game = serializers.StringRelatedField()
+    recruit_platform = serializers.StringRelatedField(many=True)
+    host_user = TalkroomTinderUserSerializer()
+    guest_user = TalkroomTinderUserSerializer(many=True)
+    class Meta:
+        model = models.Talkroom
+        fields = ('id','game', 'recruit_platform', 'recruit_num', 'recruit_gender', 'recruit_context','host_user','guest_user')
+        extra_kwargs = {
+            'id': {'read_only': True},
+            'host_user': {'read_only': True},
+            'guest_user': {'read_only': True},
+        }
 
 class TalkroomItemSerializer(serializers.ModelSerializer):
     game = serializers.StringRelatedField()
