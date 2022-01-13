@@ -34,3 +34,6 @@ class CustomUser(AbstractUser):
     image = models.ImageField(verbose_name="画像",upload_to='images/',blank=True,null=True)
     class Meta:
         verbose_name_plural='CustomUser'
+
+    def __str__(self):
+        return self.username
