@@ -3,7 +3,7 @@ from . import serializers
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated,AllowAny,IsAdminUser
 from rest_framework.authtoken.models import Token
-from .models import CustomUser
+from .models import CustomUser,ExpoPushToken
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.decorators import action
 # Create your views here.
@@ -78,11 +78,44 @@ class UserInfoViewSet(viewsets.ModelViewSet):
         data = queryset.delete()
         return Response(data)
 
-    @action(detail=True, methods=['post'], permission_classes=[IsAdminOrIsSelf])
-    def set_password(self, request, pk=None):
-        user = CustomUser.objects.get(pk=pk)
-        serializer = serializers.PasswordSerializer(data=request.data)
+    @action(detail=False, methods=['post'], permission_classes=[AllowAny])
+    def set_password(self, request):
+        try:
+            serializer = serializers.PasswordSerializer(data=request.data['password'])
+            serializer.is_valid(raise_exception=True)
+            user = CustomUser.objects.get(username=request.data['username'])
+            user.set_password(serializer.validated_data['password'])
+            user.save()
+            return Response({'status': 'password set'})
+        except Exception as e:
+            return Response({'status': e})
+
+class ExpoPushTokenViewSet(viewsets.ModelViewSet):
+    serializer_class = serializers.ExpoPushTokenSerializer
+    def get_queryset(self):
+        inquiry = ExpoPushToken.objects.filter(user=self.request.user)
+        return inquiry
+    def list(self, request):
+        try:
+            queryset = ExpoPushToken.objects.get(user=request.user)
+        except ExpoPushToken.DoesNotExist:
+            return Response({"expo_token":""})
+        serializer = serializers.ExpoPushTokenSerializer(queryset)
+        return Response(serializer.data)
+
+    def create(self, request):
+        serializer = serializers.ExpoPushTokenSerializer(data=request.data,context={'userID':request.user})
         serializer.is_valid(raise_exception=True)
-        user.set_password(serializer.validated_data['password'])
-        user.save()
-        return Response({'status': 'password set'})
+        serializer.save()
+        return Response(serializer.data)
+
+    @action(detail=False, methods=['post'], permission_classes=[IsAdminOrIsSelf])
+    def token_update(self, request):
+        try:
+            token = ExpoPushToken.objects.get(user=request.user)
+        except ExpoPushToken.DoesNotExist:
+            return Response({"expo_token":""})
+        serializer = serializers.ExpoPushTokenSerializer(token,data=request.data,partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)

@@ -1,0 +1,2325 @@
+2022-02-02 10:36:03,706	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 10:36:04,223	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 10:42:49,914	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 10:52:05,192	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 10:52:05,826	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 11:01:01,517	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-02-02 11:09:06,259	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-02-02 11:10:20,729	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-02-02 11:15:00,393	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fb8fdcf1320>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/matching_app/inquiry/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fb8fbf1c890>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb8fd327950>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb8fbf4c190>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x7fb8fbf1c490>, 'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'ログイン', 'app_path': '/admin/login/?next=/admin/matching_app/inquiry/', 'username': '', 'next': '/admin/matching_app/inquiry/', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fb8fbf4c8d0>, 'site_name': 'sumgames.click', 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<IfNode>, <Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+2022-02-02 11:15:00,395	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fb8fdcf1320>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/matching_app/inquiry/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fb8fbf1c890>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb8fd327950>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb8fbf4c190>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x7fb8fbf1c490>, 'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'ログイン', 'app_path': '/admin/login/?next=/admin/matching_app/inquiry/', 'username': '', 'next': '/admin/matching_app/inquiry/', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fb8fbf4c8d0>, 'site_name': 'sumgames.click', 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_subtitle. Contents: [<IfNode>]>}]
+2022-02-02 11:18:35,095	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-02 11:20:21,076	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fb8fc598f80>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fb8fc5a8950>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb8fc5a4dd0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb8fc5a8610>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x7fb8fc5a8410>, 'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'ログイン', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fb8fc5a8350>, 'site_name': 'sumgames.click', 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<IfNode>, <Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+2022-02-02 11:20:21,077	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fb8fc598f80>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fb8fc5a8950>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb8fc5a4dd0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb8fc5a8610>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x7fb8fc5a8410>, 'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'ログイン', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fb8fc5a8350>, 'site_name': 'sumgames.click', 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_subtitle. Contents: [<IfNode>]>}]
+2022-02-02 11:20:21,582	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fb8fc598cb0>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fb8fc59fa90>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb8fc59f290>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb8fc5a4910>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x7fb8fc59f250>, 'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'ログイン', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fb8fc59f990>, 'site_name': 'sumgames.click', 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<IfNode>, <Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+2022-02-02 11:20:21,584	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'subtitle' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'subtitle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [subtitle] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fb8fc598cb0>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fb8fc59fa90>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb8fc59f290>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb8fc5a4910>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x7fb8fc59f250>, 'site_title': 'Django サイト管理', 'site_header': 'Django 管理サイト', 'site_url': '/', 'has_permission': False, 'available_apps': [], 'is_popup': False, 'is_nav_sidebar_enabled': True, 'title': 'ログイン', 'app_path': '/admin/login/?next=/admin/', 'username': '', 'next': '/admin/', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fb8fc59f990>, 'site_name': 'sumgames.click', 'LANGUAGE_CODE': 'ja', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_subtitle. Contents: [<IfNode>]>}]
+2022-02-02 11:21:01,749	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Unauthorized: /api/talkroom/
+2022-02-02 11:21:02,767	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-02 11:21:04,780	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-02-02 11:21:10,462	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-02 11:21:10,667	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-02 11:37:02,539	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:37:03,592	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:37:06,332	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:37:24,379	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/null/exit_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2434, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "/usr/lib64/python3.7/uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 190, in exit_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2418, in get_prep_value
+    return self.to_python(value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2439, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“null” は有効なUUIDではありません。']
+2022-02-02 11:37:36,862	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:37:59,233	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/null/exit_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2434, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "/usr/lib64/python3.7/uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 190, in exit_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2418, in get_prep_value
+    return self.to_python(value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2439, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“null” は有効なUUIDではありません。']
+2022-02-02 11:38:26,783	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:39:59,334	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/null/exit_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2434, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "/usr/lib64/python3.7/uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 190, in exit_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2418, in get_prep_value
+    return self.to_python(value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2439, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“null” は有効なUUIDではありません。']
+2022-02-02 11:40:08,050	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/null/exit_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2434, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "/usr/lib64/python3.7/uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 190, in exit_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2418, in get_prep_value
+    return self.to_python(value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2439, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“null” は有効なUUIDではありません。']
+2022-02-02 11:40:49,115	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:41:13,758	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:41:17,354	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:42:34,914	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/null/exit_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2434, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "/usr/lib64/python3.7/uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 190, in exit_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2418, in get_prep_value
+    return self.to_python(value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2439, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“null” は有効なUUIDではありません。']
+2022-02-02 11:42:59,889	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:44:34,411	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/null/exit_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2434, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "/usr/lib64/python3.7/uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 190, in exit_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2418, in get_prep_value
+    return self.to_python(value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2439, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“null” は有効なUUIDではありません。']
+2022-02-02 11:45:11,825	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 11:45:11,856	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/68747f9a-c0b3-4dd7-ba06-e5804f66a195/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 136, in retrieve
+    queryset = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+matching_app.models.Talkroom.DoesNotExist: Talkroom matching query does not exist.
+2022-02-02 11:50:14,679	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-02 11:50:16,144	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Unauthorized: /api/talkroom/
+2022-02-02 11:50:19,659	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-02-02 11:57:03,796	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-02 11:57:05,741	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Unauthorized: /api/talkroom/
+2022-02-02 11:57:09,525	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-02-02 12:01:01,597	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 12:01:02,126	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 12:05:13,137	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 12:07:19,540	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/c9be77a8-d893-48e5-877b-669cecb2d115/join_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 178, in join_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+matching_app.models.Talkroom.DoesNotExist: Talkroom matching query does not exist.
+2022-02-02 12:11:32,201	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/null/exit_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2434, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "/usr/lib64/python3.7/uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 190, in exit_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2418, in get_prep_value
+    return self.to_python(value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2439, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“null” は有効なUUIDではありません。']
+2022-02-02 12:13:59,879	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 12:14:38,161	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/null/exit_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2434, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "/usr/lib64/python3.7/uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 190, in exit_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2418, in get_prep_value
+    return self.to_python(value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2439, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“null” は有効なUUIDではありません。']
+2022-02-02 12:14:55,311	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 12:16:06,622	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 12:16:06,956	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 12:17:46,767	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-02 12:24:20,741	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/86742fa8-dafc-423a-a37a-93f8f25c0d76/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 136, in retrieve
+    queryset = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+matching_app.models.Talkroom.DoesNotExist: Talkroom matching query does not exist.
+2022-02-02 12:28:17,543	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /actuator/health
+2022-02-02 12:46:27,010	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 12:46:28,841	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 12:48:25,585	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-02 12:49:53,040	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 12:49:53,607	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 13:06:11,534	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /nmaplowercheck1643774770
+2022-02-02 13:06:11,703	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /evox/about
+2022-02-02 13:06:11,829	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /sdk
+2022-02-02 13:06:13,251	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1
+2022-02-02 13:12:42,225	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /cdn-cgi/trace
+2022-02-02 13:12:54,090	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /actuator/health
+2022-02-02 13:25:27,948	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 13:25:28,452	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 13:38:36,881	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /test6956.php
+2022-02-02 14:00:38,399	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 14:00:39,723	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 14:20:27,349	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-02 14:20:27,485	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-02 14:21:01,576	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 14:21:02,147	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 14:50:39,827	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 14:50:40,332	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 14:50:54,667	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-02 14:51:09,919	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 14:51:31,421	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 14:51:32,999	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 14:51:40,331	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 14:52:24,341	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 14:52:30,304	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 14:53:58,372	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-02 14:53:59,901	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-02 14:54:01,233	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-02 14:57:45,714	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 14:57:49,131	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /accounts/user/null/set_password/
+2022-02-02 14:57:53,030	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /accounts/user/null/set_password/
+2022-02-02 14:58:30,161	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 14:59:16,489	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 14:59:17,260	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /0bef
+2022-02-02 14:59:34,694	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 15:01:41,410	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 15:01:45,489	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-02 15:02:22,030	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 15:07:36,863	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-02-02 15:09:55,145	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-02-02 15:24:03,308	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:03,309	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'allow_blank' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BoundField' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/utils/serializer_helpers.py", line 67, in __getattr__
+    return getattr(self._field, attr_name)
+AttributeError: 'PrimaryKeyRelatedField' object has no attribute 'allow_blank'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'allow_blank'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [allow_blank] in <BoundField value= errors=None>
+2022-02-02 15:24:03,390	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select_multiple.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select_multiple.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:03,395	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:03,396	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in {'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:03,396	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in {'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:03,397	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:03,398	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:03,399	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in {'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:03,399	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'rows' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rows] in {'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:03,399	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select_multiple.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select_multiple.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651cab90>}
+2022-02-02 15:24:53,702	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/2f3a884b-a087-422d-b111-3b283b7e484d/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 136, in retrieve
+    queryset = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+matching_app.models.Talkroom.DoesNotExist: Talkroom matching query does not exist.
+2022-02-02 15:25:10,449	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:25:10,450	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'allow_blank' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BoundField' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/utils/serializer_helpers.py", line 67, in __getattr__
+    return getattr(self._field, attr_name)
+AttributeError: 'PrimaryKeyRelatedField' object has no attribute 'allow_blank'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'allow_blank'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [allow_blank] in <BoundField value= errors=None>
+2022-02-02 15:25:10,529	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select_multiple.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select_multiple.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:25:10,534	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:25:10,534	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in {'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:25:10,534	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in {'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:25:10,535	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:25:10,536	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:25:10,536	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in {'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:25:10,536	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'rows' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rows] in {'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:25:10,537	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select_multiple.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select_multiple.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f27651c9a50>}
+2022-02-02 15:27:02,873	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:27:02,874	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'allow_blank' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BoundField' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/utils/serializer_helpers.py", line 67, in __getattr__
+    return getattr(self._field, attr_name)
+AttributeError: 'PrimaryKeyRelatedField' object has no attribute 'allow_blank'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'allow_blank'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [allow_blank] in <BoundField value= errors=None>
+2022-02-02 15:27:02,952	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select_multiple.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select_multiple.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:27:02,957	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:27:02,957	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in {'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:27:02,957	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'autofocus' in template 'rest_framework/horizontal/input.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'autofocus'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [autofocus] in {'base_template': 'input.html', 'input_type': 'number', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:27:02,958	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:27:02,959	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:27:02,959	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'placeholder' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'placeholder'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [placeholder] in {'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:27:02,959	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'rows' in template 'rest_framework/horizontal/textarea.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rows'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rows] in {'base_template': 'textarea.html', 'input_type': 'text', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:27:02,960	[DEBUG]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py(Line:873)	Exception while resolving variable 'hide_label' in template 'rest_framework/horizontal/select_multiple.html'.
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+KeyError: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'hide_label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [hide_label] in {'base_template': 'select_multiple.html', 'template_pack': 'rest_framework/horizontal', 'renderer': <rest_framework.renderers.HTMLFormRenderer object at 0x7f2765e81b90>}
+2022-02-02 15:50:37,799	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-02 16:15:58,315	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 16:15:58,841	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 16:20:33,643	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-02 16:25:50,681	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 16:25:50,921	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 17:41:24,616	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 17:41:25,200	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 17:47:55,096	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1/
+2022-02-02 17:59:57,954	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: //a2billing/customer/templates/default/footer.tpl
+2022-02-02 18:12:14,360	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 18:12:15,899	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 18:12:54,162	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-02-02 18:29:19,152	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1/
+2022-02-02 18:30:13,144	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /accounts/expo-push-token/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 51, in create
+    token = ExpoPushToken.objects.get(user=user)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+accounts.models.ExpoPushToken.DoesNotExist: ExpoPushToken matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/views.py", line 109, in create
+    serializer.save()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/home/app_admin/venv_sumgames/Sumgames/accounts/serializers.py", line 57, in create
+    expo_token = validated_data['expo_token']
+KeyError: 'expo_token'
+2022-02-02 19:08:16,207	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 19:08:16,715	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 19:21:46,949	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-02 19:32:23,162	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 19:51:32,148	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-02 20:18:48,286	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 20:33:03,823	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 20:33:04,361	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 20:54:33,490	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 20:54:34,149	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 21:31:01,379	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.git/HEAD
+2022-02-02 21:58:10,013	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 21:58:10,581	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 22:11:47,355	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 22:30:02,498	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /setup.cgi
+2022-02-02 23:03:46,064	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 23:25:37,781	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 23:25:38,389	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 23:38:36,645	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-02 23:38:37,178	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-02 23:47:33,772	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: ///admin/config.php
+2022-02-03 00:27:36,647	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /phpmyadmin_/index.php
+2022-02-03 01:00:55,976	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 01:00:56,430	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 01:13:37,648	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 01:13:38,161	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 01:35:22,166	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+2022-02-03 01:38:00,406	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /owa/auth/x.js
+2022-02-03 01:42:14,152	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /owa/auth/logon.aspx
+2022-02-03 01:48:28,139	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-02-03 02:16:43,027	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /config/getuser
+2022-02-03 02:21:47,607	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-02-03 02:24:05,064	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-02-03 02:31:08,991	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 02:31:09,440	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 02:39:49,674	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 02:39:49,983	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 02:44:11,259	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 02:44:11,777	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 02:44:37,168	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 02:44:39,595	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 02:50:57,486	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 02:50:58,147	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 03:13:16,047	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 03:19:32,485	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.git/config
+2022-02-03 03:20:08,601	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 03:20:09,753	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /info.php
+2022-02-03 03:20:11,077	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /debug/default/view
+2022-02-03 03:20:12,314	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 03:20:13,452	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /frontend_dev.php/$
+2022-02-03 03:25:09,956	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 03:25:10,745	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 03:26:08,969	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /cgi-bin/welcome
+2022-02-03 03:29:43,742	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-03 03:29:43,971	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /js../.git/config
+2022-02-03 03:29:44,201	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /images../.git/config
+2022-02-03 03:29:44,429	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /img../.git/config
+2022-02-03 03:29:44,652	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /css../.git/config
+2022-02-03 03:29:44,875	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /assets../.git/config
+2022-02-03 03:29:45,105	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /content../.git/config
+2022-02-03 03:29:45,329	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /events../.git/config
+2022-02-03 03:29:45,547	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-03 03:29:45,770	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /lib../.git/config
+2022-02-03 04:10:29,894	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 04:10:30,125	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 04:13:08,756	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 04:13:09,275	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 04:15:01,085	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: ///remote/fgt_lang
+2022-02-03 04:31:52,738	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-03 04:45:00,720	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-03 05:07:52,983	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 05:07:53,402	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 05:43:20,892	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 05:43:21,429	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 06:10:06,563	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 06:10:06,803	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 06:20:56,178	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-03 06:59:35,544	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-03 07:02:14,407	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-02-03 07:04:50,272	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-02-03 07:10:08,498	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 07:10:09,018	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 07:12:44,270	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-02-03 07:35:27,270	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+2022-02-03 07:36:16,157	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /owa/auth/logon.aspx
+2022-02-03 07:38:55,842	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /owa/auth/logon.aspx
+2022-02-03 07:41:45,429	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+2022-02-03 08:37:51,498	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 08:37:52,001	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 08:48:45,148	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /dns-query
+2022-02-03 08:48:45,819	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /dns-query
+2022-02-03 09:09:58,932	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 09:10:00,425	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 09:45:21,840	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 09:45:22,119	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 09:57:34,089	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-03 09:57:42,162	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-03 09:57:48,596	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-03 09:58:05,047	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-03 09:58:12,632	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-03 10:00:16,353	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-03 10:00:23,335	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-03 10:00:37,718	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/user/
+2022-02-03 10:01:45,345	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-03 10:01:47,482	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-03 10:01:50,282	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-03 10:02:25,495	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-03 10:04:40,778	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-02-03 10:04:41,300	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-02-03 10:05:26,506	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-03 10:05:29,156	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-03 10:05:36,087	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-03 10:08:18,215	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-03 10:08:46,989	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /accounts/api-token-auth/
+2022-02-03 10:08:54,902	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-03 10:08:54,923	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-02-03 10:08:55,414	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-03 10:08:58,917	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Unauthorized: /api/gameitem/
+2022-02-03 10:10:14,101	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-03 10:10:14,562	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-02-03 10:23:25,910	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /0bef
+2022-02-03 10:24:03,268	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env

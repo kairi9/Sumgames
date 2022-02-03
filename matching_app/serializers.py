@@ -2,7 +2,7 @@ from django.db.models import fields
 from rest_framework import serializers
 from drf_base64.serializers import ModelSerializer
 from . import models
-from accounts.models import CustomUser
+from accounts.models import CustomUser,ExpoPushToken
 
 class GameItemSerializer(serializers.ModelSerializer):
     class Meta:
@@ -52,17 +52,15 @@ class TalkroomTinderSerializer(serializers.ModelSerializer):
         }
 
 class TalkroomItemSerializer(serializers.ModelSerializer):
-    game = serializers.StringRelatedField()
-    recruit_platform = serializers.StringRelatedField(many=True)
-    host_user = TalkroomUserSerializer(read_only=True)
-    guest_user = TalkroomUserSerializer(many=True,read_only=True)
+    expo_tokens = serializers.StringRelatedField(many=True)
     class Meta:
         model = models.Talkroom
-        fields = ('id','game', 'recruit_platform', 'recruit_num', 'recruit_gender', 'recruit_context','host_user','guest_user')
+        fields = ('id','game', 'recruit_platform', 'recruit_num', 'recruit_gender', 'recruit_context','host_user','guest_user','expo_tokens')
         extra_kwargs = {
             'id': {'read_only': True},
             'host_user': {'read_only': True},
             'guest_user': {'read_only': True},
+            'expo_tokens': {'read_only': True},
         }
 
     def create(self, validated_data):
@@ -94,7 +92,6 @@ class InquiryItemSerializer(serializers.ModelSerializer):
         model = models.Inquiry
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
         fields = ('inquiry_title','inquiry_context')
-
     def create(self, validated_data):
         inquiry = models.Inquiry(
             inquiry_title = validated_data['inquiry_title'],

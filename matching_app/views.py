@@ -23,7 +23,10 @@ def get_ranking():
         else:
             games[obj.game] = games[obj.game]+obj.guest_user__count + 1
     sorted_games = sorted(games.items(), key=lambda x:x[1],reverse=True)
-    return [x[0] for x in sorted_games] + [y for y in models.Game.objects.all()[:10-len(sorted_games)]]
+    ranking = [x[0] for x in sorted_games][:10]
+    if len(ranking) < 10:
+        ranking += [y for y in models.Game.objects.all() if not y in [x[0] for x in sorted_games]][:10-len(sorted_games)]
+    return ranking
 
 
 class GameViewSet(viewsets.ReadOnlyModelViewSet):
@@ -80,7 +83,7 @@ class TalkViewSet(viewsets.ModelViewSet):
             talkroom = models.Talkroom.objects.get(host_user = user.pk)
         except models.Talkroom.DoesNotExist:
             talkroom = models.Talkroom.objects.get(guest_user__pk = user.pk)
-        queryset = models.Talk.objects.filter(talkroom = talkroom)
+        queryset = models.Talk.objects.filter(talkroom = talkroom).order_by('-send_at').reverse()
         serializer = serializers.TalkItemSerializer(queryset,many=True)
         for x in serializer.data:
             user = CustomUser.objects.get(pk=x["user"])
@@ -94,7 +97,7 @@ class TalkViewSet(viewsets.ModelViewSet):
     def create(self, request):
         user = request.user
         try:
-            talkroom = models.Talkroom.objects.get(host_user = user.pk)
+            talkroom = models.Talkroom.objects.get(host_user = user)
         except models.Talkroom.DoesNotExist:
             talkroom = models.Talkroom.objects.get(guest_user__pk = user.pk)
         serializer = serializers.TalkItemSerializer(data=request.data,context={'userID':user,'talkroom':talkroom})
@@ -121,11 +124,13 @@ class TalkroomViewSet(viewsets.ModelViewSet):
         user = request.user
         gender = user.gender
         keyword = request.query_params.get('game_id')
-        queryset = models.Talkroom.objects.filter(under_recruitment=True,game=keyword).exclude(recruit_gender="FE")
-        if gender == "EX":
-            queryset = models.Talkroom.objects.filter(under_recruitment=True,recruit_gender="AL")
+        queryset = models.Talkroom.objects.filter(under_recruitment=True,game=keyword)
+        if gender =="MA":
+            queryset = queryset.exclude(recruit_gender="FE")
         elif gender =="FE":
-            queryset = models.Talkroom.objects.filter(under_recruitment=True).exclude(recruit_gender="MA")
+            queryset = queryset.exclude(recruit_gender="MA")
+        elif gender == "EX":
+            queryset = queryset.filter(recruit_gender="AL")
         serializer = serializers.TalkroomTinderSerializer(queryset,many=True)
         return Response(serializer.data)
     
@@ -183,11 +188,14 @@ class TalkroomViewSet(viewsets.ModelViewSet):
     
     @action(detail=True, methods=['post'], permission_classes=[IsAdminOrIsSelf])
     def exit_talkroom(self, request, pk=None):
-        talkroom = models.Talkroom.objects.get(pk=pk)
+        try:
+            talkroom = models.Talkroom.objects.get(pk=pk)
+        except models.Talkroom.DoesNotExist:
+            return Response({"error":"talkroom does not exist"})
         if request.user == talkroom.host_user or talkroom.guest_user.all().count() < 1:
             talks = models.Talk.objects.filter(talkroom = talkroom)
             for talk in talks:
-                if talk.talkfile is not None:
+                if talk.talkfile.name != '':
                     os.remove(talk.talkfile.path)
             talkroom.delete()
             return Response({"detail":"deleted"})

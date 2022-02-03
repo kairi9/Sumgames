@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from .models import CustomUser
+from matching_app.models import Talkroom
+from .models import CustomUser,ExpoPushToken
+from django.db import IntegrityError
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -36,3 +38,34 @@ class PasswordSerializer(serializers.ModelSerializer):
         # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
         fields = ['password']
         extra_kwargs = {'password': {'write_only': True}}
+
+class ExpoPushTokenSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ExpoPushToken
+        # 出力したいフィールド名をタプルで(括弧とカンマ)で定義します。
+        fields = ['expo_token']
+
+    def create(self, validated_data):
+        user = self.context['userID']
+        try:
+            token = ExpoPushToken.objects.get(user=user)
+            token.expo_token = validated_data['expo_token']
+            token.save()
+        except ExpoPushToken.DoesNotExist:
+            token = ExpoPushToken(
+                user = user,
+                expo_token = validated_data['expo_token']
+            )
+            token.save()
+        try:
+            talkroom = Talkroom.objects.get(host_user = user.pk)
+        except Talkroom.DoesNotExist:
+            talkroom = Talkroom.objects.get(guest_user__pk = user.pk)
+        talkroom.expo_tokens.add(token)
+        talkroom.save()
+        return token
+    
+    def update(self, instance, validated_data):
+        instance.expo_token = validated_data.get('expo_token', instance.expo_token)
+        instance.save()
+        return instance

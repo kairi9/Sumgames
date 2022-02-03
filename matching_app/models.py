@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator
-from accounts.models import CustomUser
+from accounts.models import CustomUser,ExpoPushToken
 import uuid as uuid_lib
 
 class Genre(models.Model):
@@ -10,7 +10,7 @@ class Genre(models.Model):
         primary_key=True,
         editable=False,
     )
-    genrename = models.CharField(verbose_name='ジャンル名',max_length=50,unique=True)
+    genrename = models.CharField(verbose_name='ジャンル名',max_length=150,unique=True)
 
     def __str__(self):
         return self.genrename
@@ -21,7 +21,7 @@ class Tags(models.Model):
         primary_key=True,
         editable=False,
     )
-    tag_name = models.CharField(verbose_name="タグ名",max_length=50,unique=True)
+    tag_name = models.CharField(verbose_name="タグ名",max_length=150,unique=True)
 
     def __str__(self):
         return self.tag_name
@@ -32,7 +32,7 @@ class Platform(models.Model):
         primary_key=True,
         editable=False,
     )
-    platform_name = models.CharField(verbose_name='プラットフォーム名',max_length=50,unique=True)
+    platform_name = models.CharField(verbose_name='プラットフォーム名',max_length=150,unique=True)
     def __str__(self):
         return self.platform_name
 
@@ -43,7 +43,7 @@ class Game(models.Model):
         primary_key=True,
         editable=False,
     )
-    game_name =models.CharField(verbose_name="ゲーム名",max_length=50,unique=True)
+    game_name =models.CharField(verbose_name="ゲーム名",max_length=150,unique=True)
     genre =models.ManyToManyField(Genre,verbose_name="ジャンル")
     detail = models.TextField(verbose_name="説明",blank=True,null=True)
     image = models.ImageField(verbose_name="画像",upload_to='images/',default='images/default.png')
@@ -76,11 +76,11 @@ class Talkroom(models.Model):
     )
     recruit_platform = models.ManyToManyField(Platform,verbose_name="プラットフォーム")
     host_user = models.ForeignKey(CustomUser,verbose_name="ホストユーザー",on_delete=models.PROTECT,related_name='host_user')
-    guest_user = models.ManyToManyField(CustomUser,verbose_name="ゲストユーザー",related_name='guest_user')
+    guest_user = models.ManyToManyField(CustomUser,verbose_name="ゲストユーザー",related_name='guest_user',blank=True)
     recruit_context = models.TextField(verbose_name='募集内容',default="誰でも気軽に参加してください。")
     under_recruitment = models.BooleanField(verbose_name="募集中",default=True)
     create_at = models.DateTimeField(verbose_name="作成日時",auto_now_add=True)
-
+    expo_tokens = models.ManyToManyField(ExpoPushToken,verbose_name="EXPOトークン",blank=True)
     class Meta:
         ordering=['-create_at']
 

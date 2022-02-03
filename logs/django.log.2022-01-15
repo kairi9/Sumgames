@@ -1,0 +1,82 @@
+2022-01-14 13:51:00,023	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-01-14 13:51:00,517	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-01-14 13:51:37,852	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 13:51:37,853	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 13:51:38,025	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 13:51:38,025	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /favicon.ico
+2022-01-14 13:52:00,529	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 13:52:00,529	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 13:52:00,748	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 13:52:00,748	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /favicon.ico
+2022-01-14 13:52:45,049	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 13:52:45,050	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 13:52:45,199	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 13:52:45,200	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /favicon.ico
+2022-01-14 13:56:09,251	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-01-14 14:36:50,350	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:36:50,454	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 14:37:34,194	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:37:34,194	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 14:37:37,056	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:37:37,056	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 14:38:30,848	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:38:30,848	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 14:38:34,734	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:38:34,735	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /favicon.ico
+2022-01-14 14:38:38,428	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:38:38,428	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 14:38:42,967	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:38:42,967	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /favicon.ico
+2022-01-14 14:39:07,005	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:39:07,005	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 14:46:58,601	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:46:58,601	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 14:53:10,377	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:53:10,377	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 14:53:10,586	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:53:10,586	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /favicon.ico
+2022-01-14 14:54:07,296	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:54:07,297	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 14:54:07,485	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 14:54:07,486	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /favicon.ico
+2022-01-14 15:00:09,206	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 15:00:09,207	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-14 15:00:09,394	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: 'sumgames.tk'. You may need to add 'sumgames.tk' to ALLOWED_HOSTS.
+2022-01-14 15:00:09,395	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /favicon.ico
+2022-01-14 16:48:22,821	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /public/img/mongo-express-logo.png
+2022-01-14 17:33:12,955	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-14 17:33:13,550	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-14 20:39:09,273	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-14 20:39:10,613	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-14 23:57:06,050	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-14 23:57:06,820	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-15 00:10:34,024	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: '139.162.113.11'. You may need to add '139.162.113.11' to ALLOWED_HOSTS.
+2022-01-15 00:10:34,024	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-15 01:16:52,577	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1/
+2022-01-15 02:13:37,977	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1/
+2022-01-15 02:32:41,236	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-15 02:32:42,212	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-15 02:42:15,837	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1/
+2022-01-15 04:22:10,750	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2022-01-15 05:00:57,975	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2022-01-15 05:21:03,874	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /solr/admin/info/system
+2022-01-15 05:24:24,788	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-15 05:24:26,186	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-15 05:26:08,797	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /robots.txt
+2022-01-15 05:30:14,546	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-15 05:30:15,484	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-15 05:35:26,953	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /phpmyadmin/
+2022-01-15 05:43:41,393	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-15 05:43:42,826	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-15 06:11:02,498	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /index.php
+2022-01-15 07:36:16,527	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /console/
+2022-01-15 08:11:26,606	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /public/img/mongo-express-logo.png
+2022-01-15 08:19:11,437	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /Autodiscover/Autodiscover.xml
+2022-01-15 08:24:56,658	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /_ignition/execute-solution
+2022-01-15 08:25:58,811	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-15 08:25:59,936	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-15 08:52:09,437	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1/
+2022-01-15 10:48:37,245	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:101)	Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+2022-01-15 10:48:37,245	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2022-01-15 11:37:44,383	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-15 11:37:45,023	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /

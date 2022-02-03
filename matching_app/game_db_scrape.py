@@ -61,7 +61,7 @@ def start_scrape():
                     request = req.Request(urljoin('https://www.gamer.ne.jp',image), headers=headers)
                     with req.urlopen(request) as f:
                         data = f.read()
-                        with open('./media/images/sumgames_{}_{}.png'.format(i,j), mode='wb') as local_file:
+                        with open('/usr/share/nginx/html/media/images/sumgames_{}_{}.png'.format(i,j), mode='wb') as local_file:
                             local_file.write(data)
                 except HTTPError:
                     pass

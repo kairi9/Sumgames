@@ -37,3 +37,19 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.username
+
+
+class ExpoPushToken(models.Model):
+    id = models.UUIDField(
+        default=uuid_lib.uuid4,
+        primary_key=True,
+        editable=False,
+    )
+    user = models.ForeignKey(CustomUser,verbose_name="ユーザー名",on_delete=models.CASCADE)
+    expo_token = models.CharField(
+        max_length=50,
+        default="",
+    )
+
+    def __str__(self):
+        return self.expo_token

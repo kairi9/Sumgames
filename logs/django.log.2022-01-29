@@ -1,0 +1,213 @@
+2022-01-29 17:25:14,345	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-29 17:27:17,001	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 17:27:17,527	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 17:55:51,928	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-29 18:00:06,480	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 18:00:07,311	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 18:46:45,454	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 18:46:47,424	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 18:49:53,557	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 18:49:54,140	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 19:35:43,807	[ERROR]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Internal Server Error: /api/talkroom/null/exit_talkroom/
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2434, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "/usr/lib64/python3.7/uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/app_admin/venv_sumgames/Sumgames/matching_app/views.py", line 187, in exit_talkroom
+    talkroom = models.Talkroom.objects.get(pk=pk)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1415, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2418, in get_prep_value
+    return self.to_python(value)
+  File "/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/db/models/fields/__init__.py", line 2439, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“null” は有効なUUIDではありません。']
+2022-01-29 20:10:37,781	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-01-29 20:14:46,340	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 20:14:46,930	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 20:22:27,993	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 20:22:28,216	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 20:47:58,158	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 20:47:58,473	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 21:00:16,882	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 21:00:17,465	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 21:39:30,153	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 21:39:30,782	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 21:52:53,519	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 21:52:53,742	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 22:45:44,607	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 22:45:44,947	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 22:45:45,788	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 22:45:46,126	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 23:14:24,840	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 23:14:25,374	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 23:17:28,234	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 23:17:28,459	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 23:21:17,413	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-29 23:21:17,862	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-29 23:22:50,419	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /robots.txt
+2022-01-29 23:22:50,879	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /sitemap.xml
+2022-01-29 23:22:51,333	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.well-known/security.txt
+2022-01-29 23:35:04,507	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Acceptable: /api/
+2022-01-30 00:00:11,261	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 00:00:12,949	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 00:02:04,266	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: ///remote/fgt_lang
+2022-01-30 00:31:04,091	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /fapi/v1/order
+2022-01-30 00:45:10,697	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1/
+2022-01-30 00:58:43,972	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /fapi/v1/order
+2022-01-30 01:03:12,818	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /config/getuser
+2022-01-30 01:04:00,062	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 01:04:00,584	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 01:07:49,417	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 01:07:49,715	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 02:28:58,543	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 02:28:59,225	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 02:39:26,142	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1/
+2022-01-30 02:40:41,737	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 02:40:42,337	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 02:49:41,452	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 02:49:41,871	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 02:54:20,777	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.git/HEAD
+2022-01-30 03:00:14,855	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 03:00:15,621	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 03:14:16,934	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /robots.txt
+2022-01-30 03:22:04,290	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bag2
+2022-01-30 03:24:09,430	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /stream
+2022-01-30 03:36:23,071	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.aws/credentials
+2022-01-30 03:36:23,604	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /phpinfo
+2022-01-30 03:36:24,130	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /phpinfo.php
+2022-01-30 03:36:24,964	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env.bak
+2022-01-30 03:36:25,459	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /info.php
+2022-01-30 03:36:26,247	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /config/aws.yml
+2022-01-30 03:36:26,772	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /_profiler/phpinfo
+2022-01-30 03:37:36,261	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /boaform/admin/formLogin
+2022-01-30 03:53:46,341	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /stream
+2022-01-30 04:14:32,318	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 04:14:32,877	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 04:31:49,903	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-30 04:47:00,272	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 04:47:01,199	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 04:49:49,405	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 04:49:49,717	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 05:01:58,755	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-30 05:15:54,834	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 05:15:55,216	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 05:22:38,856	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 05:22:39,323	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 05:47:51,762	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 05:47:52,274	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 06:18:24,586	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 06:21:52,582	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-30 06:23:32,731	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /actuator/health
+2022-01-30 06:27:58,918	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 06:28:01,161	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 06:51:39,093	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-30 07:02:15,753	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-01-30 07:02:32,870	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /owa/auth/logon.aspx
+2022-01-30 07:03:10,197	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+2022-01-30 07:04:50,514	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-01-30 07:17:24,505	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /owa/auth/logon.aspx
+2022-01-30 07:20:09,497	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 07:20:10,029	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 07:20:38,277	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 07:24:05,274	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+2022-01-30 07:32:19,563	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /:80:undefined
+2022-01-30 07:35:06,529	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 07:35:08,802	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 08:25:23,334	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /fuN3
+2022-01-30 08:52:21,242	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 08:52:21,766	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 08:55:35,194	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Acceptable: /api/
+2022-01-30 09:05:55,169	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /robots.txt
+2022-01-30 09:10:20,162	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 09:10:21,500	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 09:16:11,911	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /autodiscover/autodiscover.json
+2022-01-30 10:03:28,249	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bag2
+2022-01-30 10:23:31,494	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 10:23:32,023	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 10:40:10,561	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-01-30 10:55:41,200	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1/
+2022-01-30 11:00:47,997	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-01-30 11:03:01,319	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-01-30 11:19:20,102	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 11:19:21,170	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 11:27:53,305	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /actuator/health
+2022-01-30 11:38:33,884	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-01-30 11:38:34,077	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2022-01-30 11:38:34,263	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /404.html
+2022-01-30 11:39:59,248	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /adminn
+2022-01-30 11:40:27,540	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Unauthorized: /api/gameitem/
+2022-01-30 11:54:50,132	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 11:54:50,658	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 12:01:02,780	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 12:01:03,912	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 12:08:19,572	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.git/config
+2022-01-30 12:11:53,484	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-30 12:20:02,912	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /text4041643512802
+2022-01-30 12:20:03,958	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /HNAP1
+2022-01-30 12:20:04,009	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /evox/about
+2022-01-30 12:20:05,006	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /sdk
+2022-01-30 12:20:30,370	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /robots.txt
+2022-01-30 12:27:01,121	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: ///admin/config.php
+2022-01-30 12:42:24,287	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-30 13:12:28,142	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /boaform/admin/formLogin
+2022-01-30 13:12:51,038	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /aaa9
+2022-01-30 13:12:52,377	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /aab9
+2022-01-30 13:28:28,366	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 13:28:28,977	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 14:17:52,431	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 14:17:53,308	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 14:49:59,273	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /robots.txt
+2022-01-30 14:49:59,608	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.well-known/security.txt
+2022-01-30 15:01:06,945	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 15:01:07,486	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 15:08:45,134	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-01-30 15:09:52,535	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /bapi/composite/v1/public/cms/article/list/query
+2022-01-30 15:25:19,587	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-30 15:55:39,165	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /api/v1/time
+2022-01-30 16:18:16,186	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env
+2022-01-30 16:18:16,409	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 16:34:51,780	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Forbidden (CSRF cookie not set.): /
+2022-01-30 16:34:52,384	[WARNING]	/home/app_admin/venv_sumgames/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /.env

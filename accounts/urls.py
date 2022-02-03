@@ -9,5 +9,6 @@ urlpatterns = [
 ]
 router = routers.DefaultRouter()
 router.register(r'user', views.UserInfoViewSet,basename='user')
+router.register(r'expo-push-token', views.ExpoPushTokenViewSet,basename='expo-push-token')
 
 urlpatterns += router.urls
